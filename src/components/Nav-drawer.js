@@ -47,6 +47,16 @@ const styles = theme => ({
   menu: {
     width: 200,
   },
+  papermain: {
+    padding: 10,
+  },
+  textfield: {
+    padding: 10,
+  },
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
   toolbar: theme.mixins.toolbar,
 });
 
@@ -95,29 +105,34 @@ function ClippedDrawer(props) {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Paper>
-          <form onSubmit>
+        <Paper className={classes.papermain}>
+          <form onSubmit className={classes.form}>
             <TextField
+            className={classes.textfield}
             id="outlined-name"
             label="Whats the new habit?"
             margin="normal"
             variant="outlined" />
             <TextField
+            className={classes.textfield}
             id="outlined-name"
             label="Why do you want it?"
             margin="normal"
             variant="outlined" />
             <TextField
+            className={classes.textfield}
             id="outlined-name"
             label="What will your excuses be?"
             margin="normal"
             variant="outlined" />
             <TextField
+            className={classes.textfield}
             id="outlined-name"
             label="How can you overcome this?"
             margin="normal"
             variant="outlined" />
             <TextField
+            className={classes.textfield}
             id="outlined-name"
             label="How often do you want this?"
             margin="normal"
